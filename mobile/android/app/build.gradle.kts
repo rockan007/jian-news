@@ -7,8 +7,8 @@ plugins {
 
 android {
     namespace = "com.example.jian_news"
-    compileSdk = flutter.compileSdkVersion
-    ndkVersion = flutter.ndkVersion
+    compileSdk = flutter.compileSdkVersion()
+    ndkVersion = flutter.ndkVersion()
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
@@ -24,10 +24,10 @@ android {
         applicationId = "com.example.jian_news"
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
-        minSdk = flutter.minSdkVersion
-        targetSdk = flutter.targetSdkVersion
-        versionCode = flutter.versionCode
-        versionName = flutter.versionName
+        minSdk = flutter.minSdkVersion()
+        targetSdk = flutter.targetSdkVersion()
+        versionCode = flutter.versionCode()
+        versionName = flutter.versionName()
     }
 
     buildTypes {
