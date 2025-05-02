@@ -33,6 +33,12 @@ jobs:
         run: |
           cd mobile
           flutter pub get
+          
+      - name: Check plugin compatibility
+        run: |
+          cd mobile
+          flutter pub deps
+          flutter doctor -v
       
       - name: Create .env file
         run: |
@@ -42,6 +48,8 @@ jobs:
       - name: Build APK
         run: |
           cd mobile
+          flutter clean
+          flutter pub get
           flutter build apk --debug --verbose
       
       - name: Upload APK
